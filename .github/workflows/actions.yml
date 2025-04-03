@@ -1,0 +1,17 @@
+name: actualizarweb
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    env:
+      algo: "algo"
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # permiso necesario para aws
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4.2.2
+
